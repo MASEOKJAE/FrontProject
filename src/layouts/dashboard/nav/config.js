@@ -7,19 +7,24 @@ const icon = (name) => <SvgColor src={`/assets/icons/navbar/${name}.svg`} sx={{ 
 
 const navConfig = [
   {
-    title: '출석 데이터',
+    title: 'Home',              // 옮겨야 하는 내용 -> profile 안으로
     path: '/dashboard/home',
     icon: icon('ic_user'),
+  },
+  {
+    title: '출석 데이터',
+    path: '/dashboard/',
+    // icon: icon('ic_analytics'),
   },
   {
     title: '성적 데이터',
     path: '/dashboard/app',
     icon: icon('ic_analytics'),
   },
-  // {
-  //   title: 'product',
-  //   path: '/dashboard/products',
-  //   icon: icon('ic_cart'),
+  // {                          // calender 관리를 위해 임시 설정
+  //   title: '달력 체크',
+  //   path: '/dashboard/calender',
+  //   // icon: icon('ic_cart'),
   // },
   // {
   //   title: 'blog',

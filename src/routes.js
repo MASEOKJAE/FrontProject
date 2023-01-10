@@ -7,8 +7,9 @@ import SimpleLayout from './layouts/simple';
 import UserPage from './pages/UserPage';
 import LoginPage from './pages/LoginPage';
 import Page404 from './pages/Page404';
-import ProductsPage from './pages/ProductsPage';
+// import ProductsPage from './pages/ProductsPage';
 import DashboardAppPage from './pages/DashboardAppPage';
+import Calender from './pages/Calender';
 
 // ----------------------------------------------------------------------
 
@@ -21,7 +22,8 @@ export default function Router() {
         { element: <Navigate to="/dashboard/home" />, index: true },
         { path: 'app', element: <DashboardAppPage /> },
         { path: 'home', element: <UserPage /> },
-        { path: 'products', element: <ProductsPage /> },
+        { path: 'calender', element: <Calender /> },
+        // { path: 'products', element: <ProductsPage /> },
         // { path: 'blog', element: <BlogPage /> },
       ],
     },

@@ -19,16 +19,21 @@ export default function Router() {
       path: '/dashboard',
       element: <DashboardLayout />,
       children: [
-        { element: <Navigate to="/dashboard/home" />, index: true },
+        // { element: <Navigate to="/dashboard/home" />, index: true },
         { path: 'app', element: <DashboardAppPage /> },
         { path: 'home', element: <UserPage /> },
-        { path: 'products', element: <ProductsPage /> }
-        // { path: 'profile', element: <Profile /> },
+        { path: 'products', element: <ProductsPage /> },
+        // { path: 'profile', element: <Profile /> }
       ],
     },
     {
-      path: 'profile',
-      element: <Profile />,
+      path: '/dashboard',
+      element: <DashboardLayout />,
+      children:[
+        { path: 'profile', element: <Profile /> }
+      ],
+      
+      // element: <Profile />,
     },
     {
       path: 'login',

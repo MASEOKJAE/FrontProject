@@ -4,7 +4,11 @@ import { alpha } from '@mui/material/styles';
 import { Box, Divider, Typography, Stack, MenuItem, Avatar, IconButton, Popover } from '@mui/material';
 // mocks_
 import account from '../../../_mock/account';
-
+import { Navigate, useNavigate } from 'react-router-dom';
+import NavSection from 'src/components/nav-section/NavSection';
+//import {Link} from "react-router-dom";
+//import navConfig from '../nav/config';
+//import Router from './routes';
 // ----------------------------------------------------------------------
 
 const MENU_OPTIONS = [
@@ -26,15 +30,23 @@ const MENU_OPTIONS = [
 
 export default function AccountPopover() {
   const [open, setOpen] = useState(null);
+  const navigate = useNavigate();
 
   const handleOpen = (event) => {
     setOpen(event.currentTarget);
   };
 
-  const handleClose = () => {
-    setOpen(null);
+  const handleClose = (event) => {
+    setOpen(goProfilePage(event));
   };
-
+  const navConfig = [
+    {
+      path: '/profile',
+    }
+  ]
+  const goProfilePage = () => {
+    navigate("/profile");
+  };
   return (
     <>
       <IconButton

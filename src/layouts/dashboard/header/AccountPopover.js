@@ -46,6 +46,15 @@ export default function AccountPopover() {
   //     path: '/profile',
   //   }
   // ]
+  const goAttendancePage = () => {
+    navigate("/dashboard/attendance");
+  };
+  const goGradePage = () => {
+    navigate("/dashboard/grade");
+  };
+  const goRankingPage = () => {
+    navigate("/dashboard/ranking");
+  };
   const goProfilePage = () => {
     navigate("/dashboard/profile");
   };
@@ -109,10 +118,20 @@ export default function AccountPopover() {
             </MenuItem>
           ))}
         </Stack> */}
-        
+        <MenuItem onClick={goAttendancePage} sx={{m: 1}}>
+          출석
+        </MenuItem>
+        <MenuItem onClick={goGradePage} sx={{m: 1}}>
+          성적
+        </MenuItem>
+        <MenuItem onClick={goRankingPage} sx={{m: 1}}>
+          랭킹
+        </MenuItem>
+
         <MenuItem onClick={goProfilePage} sx={{m: 1}}>
           Profile
         </MenuItem>
+
 
         <Divider sx={{ borderStyle: 'dashed' }} />
 

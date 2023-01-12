@@ -10,6 +10,7 @@ import Page404 from './pages/Page404';
 import ProductsPage from './pages/ProductsPage';
 import DashboardAppPage from './pages/DashboardAppPage';
 import Profile from './pages/Profile';
+import AttendPage from './pages/AttendPage';
 
 // ----------------------------------------------------------------------
 
@@ -23,17 +24,29 @@ export default function Router() {
         { path: 'app', element: <DashboardAppPage /> },
         { path: 'home', element: <UserPage /> },
         { path: 'products', element: <ProductsPage /> },
-        // { path: 'profile', element: <Profile /> }
+        { path: 'profile', element: <Profile /> }
       ],
     },
     {
       path: '/dashboard',
       element: <DashboardLayout />,
       children:[
-        { path: 'profile', element: <Profile /> }
+        { path: 'attendance', element: <AttendPage /> }
       ],
-      
-      // element: <Profile />,
+    },
+    {
+      path: '/dashboard',
+      element: <DashboardLayout />,
+      children:[
+        { path: 'grade', element: <Profile /> }
+      ],
+    },
+    {
+      path: '/dashboard',
+      element: <DashboardLayout />,
+      children:[
+        { path: 'ranking', element: <Profile /> }
+      ],
     },
     {
       path: 'login',

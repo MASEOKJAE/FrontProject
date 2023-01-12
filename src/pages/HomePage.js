@@ -34,11 +34,19 @@ import USERLIST from '../_mock/user';
 // ----------------------------------------------------------------------
 
 const TABLE_HEAD = [
-  { id: 'name', label: 'Name', alignRight: false },
-  { id: 'company', label: 'Company', alignRight: false },
-  { id: 'role', label: 'Role', alignRight: false },
-  { id: 'isVerified', label: 'Verified', alignRight: false },
-  { id: 'status', label: 'Status', alignRight: false },
+  // { id: 'name', label: 'Name', alignRight: false },
+  // { id: 'company', label: 'Company', alignRight: false },
+  // { id: 'role', label: 'Role', alignRight: false },
+  // { id: 'isVerified', label: 'Verified', alignRight: false },
+  // { id: 'status', label: 'Status', alignRight: false },
+  // { id: '' },
+  { id: 'name', label: '과목명', alignRight: false },
+  { id: 'achievement', label: '성취도', alignRight: false },
+  { id: 'professor', label: '담당 교수', alignRight: false },
+  { id: 'syllabus', label: '강의 계획서', alignRight: false },
+  { id: 'attendance', label: '출석 토큰', alignRight: false },
+  { id: 'grade', label: '성적 토큰', alignRight: false },
+  { id: 'ranking', label: '랭킹', alignRight: false },
   { id: '' },
 ];
 
@@ -149,16 +157,16 @@ export default function UserPage() {
   return (
     <>
       <Helmet>
-        <title> User | Minimal UI </title>
+        <title> Home </title>
       </Helmet>
 
       <Container>
         <Stack direction="row" alignItems="center" justifyContent="space-between" mb={5}>
           <Typography variant="h4" gutterBottom>
-            User
+            Home
           </Typography>
           <Button variant="contained" startIcon={<Iconify icon="eva:plus-fill" />}>
-            New User
+            hambugar
           </Button>
         </Stack>
 

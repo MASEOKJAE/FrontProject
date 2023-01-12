@@ -2,13 +2,10 @@ import { useState } from 'react';
 // @mui
 import { alpha } from '@mui/material/styles';
 import { Box, Divider, Typography, Stack, MenuItem, Avatar, IconButton, Popover } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 // mocks_
 import account from '../../../_mock/account';
-import { Navigate, useNavigate } from 'react-router-dom';
-import NavSection from 'src/components/nav-section/NavSection';
-//import {Link} from "react-router-dom";
-//import navConfig from '../nav/config';
-//import Router from './routes';
+
 // ----------------------------------------------------------------------
 
 const MENU_OPTIONS = [
@@ -46,6 +43,9 @@ export default function AccountPopover() {
   //     path: '/profile',
   //   }
   // ]
+  const goHomePage = () => {
+    navigate("/dashboard/home");
+  };
   const goProfilePage = () => {
     navigate("/dashboard/profile");
   };
@@ -109,7 +109,10 @@ export default function AccountPopover() {
             </MenuItem>
           ))}
         </Stack> */}
-        
+        <MenuItem onClick={goHomePage} sx={{m: 1}}>
+          Home
+        </MenuItem>
+
         <MenuItem onClick={goProfilePage} sx={{m: 1}}>
           Profile
         </MenuItem>

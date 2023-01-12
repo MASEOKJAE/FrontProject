@@ -4,12 +4,13 @@ import DashboardLayout from './layouts/dashboard';
 import SimpleLayout from './layouts/simple';
 //
 // import BlogPage from './pages/BlogPage';
-import UserPage from './pages/HomePage';
+import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import Page404 from './pages/Page404';
-import ProductsPage from './pages/ProductsPage';
 import DashboardAppPage from './pages/DashboardAppPage';
 import Profile from './pages/Profile';
+import RankingPage from './pages/RankingPage';
+
 
 // ----------------------------------------------------------------------
 
@@ -21,19 +22,11 @@ export default function Router() {
       children: [
         // { element: <Navigate to="/dashboard/home" />, index: true },
         { path: 'app', element: <DashboardAppPage /> },
-        { path: 'home', element: <UserPage /> },
-        { path: 'products', element: <ProductsPage /> },
-        // { path: 'profile', element: <Profile /> }
-      ],
-    },
-    {
-      path: '/dashboard',
-      element: <DashboardLayout />,
-      children:[
+        { path: 'home', element: <HomePage /> },
+        // { path: 'products', element: <ProductsPage /> },
+        { path: 'ranking', element: <RankingPage /> },
         { path: 'profile', element: <Profile /> }
       ],
-      
-      // element: <Profile />,
     },
     {
       path: 'login',

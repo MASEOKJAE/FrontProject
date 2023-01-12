@@ -14,9 +14,14 @@ const MENU_OPTIONS = [
     icon: 'eva:home-fill',
   },
   {
+    label: 'Ranking',
+    icon: 'eva:person-fill',
+  },
+  {
     label: 'Profile',
     icon: 'eva:person-fill',
   },
+  
   {
     label: 'Settings',
     icon: 'eva:settings-2-fill',
@@ -45,6 +50,9 @@ export default function AccountPopover() {
   // ]
   const goHomePage = () => {
     navigate("/dashboard/home");
+  };
+  const goRankingPage = () => {
+    navigate("/dashboard/ranking");
   };
   const goProfilePage = () => {
     navigate("/dashboard/profile");
@@ -111,6 +119,10 @@ export default function AccountPopover() {
         </Stack> */}
         <MenuItem onClick={goHomePage} sx={{m: 1}}>
           Home
+        </MenuItem>
+
+        <MenuItem onClick={goRankingPage} sx={{m: 1}}>
+          Ranking
         </MenuItem>
 
         <MenuItem onClick={goProfilePage} sx={{m: 1}}>

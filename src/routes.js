@@ -11,6 +11,7 @@ import ProductsPage from './pages/ProductsPage';
 import DashboardAppPage from './pages/DashboardAppPage';
 import Profile from './pages/Profile';
 import AttendPage from './pages/AttendPage';
+import GradePage from './pages/GradePage';
 
 // ----------------------------------------------------------------------
 
@@ -38,7 +39,7 @@ export default function Router() {
       path: '/dashboard',
       element: <DashboardLayout />,
       children:[
-        { path: 'grade', element: <Profile /> }
+        { path: 'grade', element: <GradePage /> }
       ],
     },
     {

@@ -7,9 +7,10 @@ import SimpleLayout from './layouts/simple';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import Page404 from './pages/Page404';
-import DashboardAppPage from './pages/DashboardAppPage';
+import GradeDataPage from './pages/GradeDataPage';
 import Profile from './pages/Profile';
 import RankingPage from './pages/RankingPage';
+import AttendDataPage from './pages/AttendDataPage';
 
 
 // ----------------------------------------------------------------------
@@ -20,12 +21,12 @@ export default function Router() {
       path: '/dashboard',
       element: <DashboardLayout />,
       children: [
-        // { element: <Navigate to="/dashboard/home" />, index: true },
-        { path: 'app', element: <DashboardAppPage /> },
+        { element: <Navigate to="/dashboard/home" />, index: true },
         { path: 'home', element: <HomePage /> },
-        // { path: 'products', element: <ProductsPage /> },
         { path: 'ranking', element: <RankingPage /> },
-        { path: 'profile', element: <Profile /> }
+        { path: 'profile', element: <Profile /> },
+        { path: 'attendData', element: <AttendDataPage /> },
+        { path: 'gradeData', element: <GradeDataPage /> },
       ],
     },
     {

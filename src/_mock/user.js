@@ -18,17 +18,15 @@ const users = [...Array(24)].map((_, index) => ({
     '경영학입문',
     'Operating System'
   ]),
-  company: faker.company.name(),
-  isVerified: faker.datatype.boolean(),
-  status: sample(['active', 'banned']),
-  // name: faker.name.fullName(),
-  // achievement: faker.achievement.fullName(),
-  // professor: faker.professor.fullName(),
-  // syllabus: faker.syllabus.fullName(),
-  // ranking: faker.ranking.fullName(),
-  // attendance: faker.attendance.fullName(),
-  // grade: faker.grade.fullName(),
-  role: sample([
+  achievement: sample([
+    78,
+    80,
+    95,
+    58,
+    98,
+    88
+  ]),
+  professor: sample([
     '고윤민',
     '용환기',
     '남재창',

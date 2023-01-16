@@ -4,7 +4,6 @@ import DashboardLayout from './layouts/dashboard';
 import SimpleLayout from './layouts/simple';
 //
 // import BlogPage from './pages/BlogPage';
-import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import Page404 from './pages/Page404';
 import GradeDataPage from './pages/GradeDataPage';
@@ -14,6 +13,7 @@ import GradePage from './pages/GradePage';
 
 import RankingPage from './pages/RankingPage';
 import AttendDataPage from './pages/AttendDataPage';
+import HomePage from './pages/HomePage';
 
 
 export default function Router() {
@@ -22,14 +22,12 @@ export default function Router() {
       path: '/dashboard',
       element: <DashboardLayout />,
       children:[
-        { path: 'ranking', element: <Profile /> }
         { element: <Navigate to="/dashboard/home" />, index: true },
-        { path: 'app', element: <DashboardAppPage /> },
+        { path: 'app', element: <HomePage /> },
         { path: 'home', element: <HomePage /> },
         { path: 'ranking', element: <RankingPage /> },
         { path: 'profile', element: <Profile /> },
-        { path: 'attendData', element: <AttendDataPage /> },
-        { path: 'gradeData', element: <GradeDataPage /> },
+        { path: 'grade', element: <GradePage /> },
         { path: 'attendance', element: <AttendPage /> }
       ],
     },

@@ -53,6 +53,7 @@ export default function AccountPopover() {
   };
   const goGradePage = () => {
     navigate("/dashboard/grade");
+  }
   const goHomePage = () => {
     navigate("/dashboard/home");
   };

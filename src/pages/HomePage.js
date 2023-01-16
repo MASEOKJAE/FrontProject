@@ -162,10 +162,10 @@ export default function HomePage() {
     navigate("/dashboard/profile");
   };
   const goAttendance = () => {
-    navigate("/dashboard/ranking");
+    navigate("/dashboard/attendance");
   };
   const goGrade = () => {
-    navigate("/dashboard/ranking");
+    navigate("/dashboard/grade");
   };
   const goRanking = () => {
     navigate("/dashboard/ranking");

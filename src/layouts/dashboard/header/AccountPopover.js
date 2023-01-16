@@ -48,6 +48,11 @@ export default function AccountPopover() {
   //     path: '/profile',
   //   }
   // ]
+  const goAttendancePage = () => {
+    navigate("/dashboard/attendance");
+  };
+  const goGradePage = () => {
+    navigate("/dashboard/grade");
   const goHomePage = () => {
     navigate("/dashboard/home");
   };
@@ -117,6 +122,12 @@ export default function AccountPopover() {
             </MenuItem>
           ))}
         </Stack> */}
+        <MenuItem onClick={goAttendancePage} sx={{m: 1}}>
+          출석
+        </MenuItem>
+        <MenuItem onClick={goGradePage} sx={{m: 1}}>
+          성적
+        </MenuItem>
         <MenuItem onClick={goHomePage} sx={{m: 1}}>
           Home
         </MenuItem>
@@ -128,6 +139,7 @@ export default function AccountPopover() {
         <MenuItem onClick={goProfilePage} sx={{m: 1}}>
           Profile
         </MenuItem>
+
 
         <Divider sx={{ borderStyle: 'dashed' }} />
 

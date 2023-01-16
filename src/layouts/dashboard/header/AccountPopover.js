@@ -2,13 +2,10 @@ import { useState } from 'react';
 // @mui
 import { alpha } from '@mui/material/styles';
 import { Box, Divider, Typography, Stack, MenuItem, Avatar, IconButton, Popover } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 // mocks_
 import account from '../../../_mock/account';
-import { Navigate, useNavigate } from 'react-router-dom';
-import NavSection from 'src/components/nav-section/NavSection';
-//import {Link} from "react-router-dom";
-//import navConfig from '../nav/config';
-//import Router from './routes';
+
 // ----------------------------------------------------------------------
 
 const MENU_OPTIONS = [
@@ -17,9 +14,14 @@ const MENU_OPTIONS = [
     icon: 'eva:home-fill',
   },
   {
+    label: 'Ranking',
+    icon: 'eva:person-fill',
+  },
+  {
     label: 'Profile',
     icon: 'eva:person-fill',
   },
+  
   {
     label: 'Settings',
     icon: 'eva:settings-2-fill',
@@ -51,6 +53,8 @@ export default function AccountPopover() {
   };
   const goGradePage = () => {
     navigate("/dashboard/grade");
+  const goHomePage = () => {
+    navigate("/dashboard/home");
   };
   const goRankingPage = () => {
     navigate("/dashboard/ranking");
@@ -124,8 +128,12 @@ export default function AccountPopover() {
         <MenuItem onClick={goGradePage} sx={{m: 1}}>
           성적
         </MenuItem>
+        <MenuItem onClick={goHomePage} sx={{m: 1}}>
+          Home
+        </MenuItem>
+
         <MenuItem onClick={goRankingPage} sx={{m: 1}}>
-          랭킹
+          Ranking
         </MenuItem>
 
         <MenuItem onClick={goProfilePage} sx={{m: 1}}>
